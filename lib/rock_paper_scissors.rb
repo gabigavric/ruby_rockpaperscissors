@@ -7,15 +7,21 @@ class Game
   def wins(input1)
 
       if (input1 ===  @input)
-        'Tie'
+        puts 'Tie'
       elsif (input1 === "scissors" && @input === 'rock')
-        true
+        puts 'Player one wins'
       elsif (input1 === "paper" && @input === 'scissors')
-        true
+        puts 'Player one wins'
       elsif (input1 === "rock" && @input === 'paper')
-        true
+        puts 'Player one wins'
       else
-        false
+        puts 'Player one loses'
       end
   end
 end
+
+puts "Rock, paper, or scissors?"
+input1 = gets.chomp
+input2 = gets.chomp
+something = Game.new(input1)
+something.wins(input2)
